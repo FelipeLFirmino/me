@@ -4,7 +4,7 @@ import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://FelipeLFirmino.github.io",
+  site: "https://FelipelFirmino.github.io",
   base: "/me",
   integrations: [mdx(), sitemap(), tailwind()],
 });
