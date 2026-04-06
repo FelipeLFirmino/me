@@ -2,7 +2,7 @@
 company: "MSPA"
 role: "Fullstack Developer & Product Lead"
 dateStart: "2026-01-02"
-dateEnd: "Present"
+dateEnd: "2026-02-28"
 ---
 Lead the full development lifecycle, from high-performance **Golang** REST APIs to modern **Angular** interfaces.
 
