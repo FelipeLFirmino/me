@@ -2,12 +2,13 @@
 import Container from "@components/Container.astro";
 import Link from "@components/Link.astro";
 import { SITE } from "@consts";
+import { withBase } from "@lib/utils";
 ---
 
 <header>
   <Container>
     <div class="flex flex-wrap gap-y-2 justify-between">
-      <Link href="/" underline={false}>
+      <Link href={withBase("/")} underline={false}>
         <div class="font-semibold flex items-center">
           <span class="inline-block overflow-hidden whitespace-nowrap border-r-2 border-black dark:border-white pr-1 animate-typing">
             {SITE.NAME}
@@ -15,19 +16,19 @@ import { SITE } from "@consts";
         </div>
       </Link>
       <nav class="flex gap-1">
-        <Link href="/blog">
+        <Link href={withBase("/blog")}>
           blog
         </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/work">
+        <Link href={withBase("/work")}>
           Experience
         </Link>
         <span>
           {`/`}
         </span>
-        <Link href="/projects">
+        <Link href={withBase("/projects")}>
           projects
         </Link>
       </nav>

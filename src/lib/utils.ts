@@ -5,6 +5,12 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+export function withBase(path: string) {
+  const base = import.meta.env.BASE_URL.replace(/\/$/, "");
+  const suffix = path.replace(/^\//, "");
+  return suffix ? `${base}/${suffix}` : `${base}/`;
+}
+
 export function formatDate(date: Date) {
   return Intl.DateTimeFormat("en-US", {
     month: "short",

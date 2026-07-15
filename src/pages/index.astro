@@ -4,6 +4,7 @@ import Container from "@components/Container.astro";
 import PageLayout from "@layouts/PageLayout.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import { SITE, HOME, SOCIALS } from "@consts";
+import { withBase } from "@lib/utils";
 
 const blog = (await getCollection("blog"))
   .filter(post => !post.data.draft)
@@ -64,7 +65,7 @@ const allwork = (await getCollection("work"))
     <h5 class="font-semibold text-black dark:text-white">
       Work Experience
     </h5>
-    <a href="/work" class="text-blue-500 hover:underline"> View all </a>
+    <a href={withBase("/work")} class="text-blue-500 hover:underline"> View all </a>
   </div>
   <ul class="flex flex-col gap-4">
     {allwork.map(work => (
@@ -90,7 +91,7 @@ const allwork = (await getCollection("work"))
           <h5 class="font-semibold text-black dark:text-white">
             Featured Projects
           </h5>
-          <a href="/projects" class="text-blue-500 hover:underline"> View all </a>
+          <a href={withBase("/projects")} class="text-blue-500 hover:underline"> View all </a>
         </div>
         <ul class="flex flex-col gap-4">
           {projects.map(project => (
