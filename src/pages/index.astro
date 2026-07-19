@@ -24,8 +24,13 @@ const allwork = (await getCollection("work"))
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
+    <img
+      src={withBase("/nano.png")}
+      alt="Pixel art computer with a hammer and basketball"
+      class="animate w-full max-w-xs sm:max-w-sm mb-4 mx-auto"
+    />
     <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Felipe Firmino! 💻
+      Hi, I'm Felipe Firmino!
     </h4>
     <div class="space-y-16">
       <section>
